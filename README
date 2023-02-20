@@ -1,0 +1,11 @@
+#Simple test case for Arm sha1
+
+Compile: gcc -march=armv8-a+crypto sha-arm.c -o sha1
+
+Control by 'ENABLE_ARM':
+Disable Arm neon:   //#define ENABLE_ARM 1 -> 
+gcc -march=armv8-a+crypto sha-arm.c -o sha1
+
+or:
+Enable Arm neon:    #define ENABLE_ARM 1
+gcc -march=armv8-a+crypto sha-arm.c -o sha1-arm
